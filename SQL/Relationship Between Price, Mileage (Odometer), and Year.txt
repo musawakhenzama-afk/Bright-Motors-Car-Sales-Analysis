@@ -1,0 +1,14 @@
+Relationship Between Price, Mileage (Odometer), and Year
+SELECT
+    year,
+    make,
+    model,
+    AVG(sellingprice) AS avg_price,
+    AVG(odometer) AS avg_mileage,
+    COUNT(*) AS sales_count
+FROM
+    "BRIGHTLEARNDEALERSHIPDATA"."PUBLIC"."CARSALES"
+GROUP BY
+    year, make, model
+ORDER BY
+    year DESC, avg_price DESC;

@@ -1,0 +1,13 @@
+Customer Preference Trends (Optional by Trim or Body)
+SELECT
+    year,
+    body,
+    trim,
+    COUNT(*) AS units_sold,
+    SUM(sellingprice) AS total_revenue
+FROM
+    "BRIGHTLEARNDEALERSHIPDATA"."PUBLIC"."CARSALES"
+GROUP BY
+    year, body, trim
+ORDER BY
+    year DESC, units_sold DESC;

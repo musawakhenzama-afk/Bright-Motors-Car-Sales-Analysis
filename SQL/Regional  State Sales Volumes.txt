@@ -1,0 +1,11 @@
+Regional / State Sales Volumes
+SELECT
+    state,
+    SUM(sellingprice) AS total_revenue,
+    COUNT(*) AS total_units_sold
+FROM
+    "BRIGHTLEARNDEALERSHIPDATA"."PUBLIC"."CARSALES"
+GROUP BY
+    state
+ORDER BY
+    total_units_sold DESC;

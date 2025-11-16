@@ -1,0 +1,14 @@
+1)--Top Revenue by Make and Model
+
+SELECT
+    make,
+    model,
+    SUM(sellingprice) AS total_revenue,
+    COUNT(*) AS units_sold
+FROM
+    "BRIGHTLEARNDEALERSHIPDATA"."PUBLIC"."CARSALES"
+GROUP BY
+    make,
+    model
+ORDER BY
+    total_revenue DESC;

@@ -1,0 +1,12 @@
+Profit / MMR Analysis (if MMR is cost reference)
+SELECT
+    make,
+    model,
+    AVG(sellingprice - mmr) AS avg_profit,
+    COUNT(*) AS units_sold
+FROM
+    "BRIGHTLEARNDEALERSHIPDATA"."PUBLIC"."CARSALES"
+GROUP BY
+    make, model
+ORDER BY
+    avg_profit DESC;

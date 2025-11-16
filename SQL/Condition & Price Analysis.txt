@@ -1,0 +1,12 @@
+Condition & Price Analysis
+SELECT
+    condition,
+    AVG(sellingprice) AS avg_price,
+    AVG(odometer) AS avg_mileage,
+    COUNT(*) AS units_sold
+FROM
+    "BRIGHTLEARNDEALERSHIPDATA"."PUBLIC"."CARSALES"
+GROUP BY
+    condition
+ORDER BY
+    avg_price DESC;
